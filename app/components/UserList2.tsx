@@ -8,8 +8,8 @@ export default function UsersList() {
 
   useEffect(() => {
     async function fetchUsers() {
-      const response = await fetch("/api/users");
-      const data = await response.json();
+      const res = await fetch("/api/users");
+      const data = await res.json();
       setUsers(data);
     }
 

@@ -3,13 +3,13 @@
 "use server";
 
 export default async function UserList() {
-  const response = await fetch(
+  const res = await fetch(
     `${process.env.NEXT_PUBLIC_BASE_URL}/api/users`,
     {
       cache: "no-store", // Optionnel, pour désactiver la mise en cache
     }
   );
-  const users = await response.json();
+  const users = await res.json();
 
   return (
     <div>
